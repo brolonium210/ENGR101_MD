@@ -20,7 +20,7 @@ The stress, $\(\sigma\)$, in a beam under uniform loading is given by $\(\sigma 
 Solve for $\(x\): \(x^2 - 6x + 8 = 0\)$ by completing the square
 
 7. **System of Equations in an Engineering Scenario:**
-An electrical circuit consists of resistors $\(R_1\)$ and $\(R_2\)$ in parallel, with total resistance $\(R_t\)$. Given $\(\frac{1/R_t} = 1/R_1 + 1/R_2\)$ and $\(R_t = 6\)$ ohms when $\(R_1 = 10\)$ ohms, find $\(R_2\)$.
+An electrical circuit consists of resistors $\(R_1\)$ and $\(R_2\)$ in parallel, with total resistance $\(R_t\)$. Given $\(\frac{1}{R_t} = 1/R_1 + 1/R_2\)$ and $\(R_t = 6\)$ ohms when $\(R_1 = 10\)$ ohms, find $\(R_2\)$.
 
 8. **Algebraic Expressions - Factorization:**
 Factor the expression completely: $\(4x^2 - 16x + 16\)$.
