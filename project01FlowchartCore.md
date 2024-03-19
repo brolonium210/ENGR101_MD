@@ -23,10 +23,11 @@ end
 subgraph Main Function
 direction TB 
 O(Start)-->P
-P["Set Variable1
-Set Variable2
-Set Variable3
-Set Variable4"
+P["Set sample_rate
+Set duration
+Set n_samples
+Set frequency
+Set volume"
 ]-->Q
 Q[Build a vector]-->RR
 RR[set i to 0]-->R
