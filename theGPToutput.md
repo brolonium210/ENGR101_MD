@@ -2,12 +2,14 @@
     graph TD
     A[Start] --> B["Include iostream ,math.h,vector and wav.hpp"]
     B --> C[Call Main]
-    C -->D[Set sample rate to 44100]
-    D --> E[Set duration to 5 seconds]
-    E --> F[Calculate number of samples]
+    C -->D["Set sample rate to 44100
+Set duration to 5 seconds
+Calculate number of samples
+Set freq to 300 Hz
+Set volume(Amplitude)"]
     F --> G[Create empty vector for waveform]
-    G --> H[Set freq to 300 Hz]
-    H --> I["Set volume(Amplitude)"]
+    G --> H[]
+    H --> I[""]
     I --> J[Generate the Waveform]
     J --> K[Loop through each sample]
     K --> L[Calculate time between samples]
