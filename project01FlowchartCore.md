@@ -31,7 +31,8 @@ Q[Build a vector]-->RR
 RR[set i to 0]-->R
 R{"does i equal
 number of samples?"
-}-->S
+}--|Yes|-->S
+R--|No|-->RR
 S[[MakeWavFromInt]]-->T(Start)
 end
 subgraph topfile
