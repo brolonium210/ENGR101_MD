@@ -1,37 +1,35 @@
 ```mermaid
 graph
-direction LR
-
-subgraph main
+subgraph Generate Waveform
   direction TB
-  A(Start) --> B[Include Necessary Libraries];
-    B --> C[Define Main Program Variables];
+    AA[[Waveform Generate]] --> BB{"weeWah 
+    True?"};
+    BB -->|"if Yes 
+    Set frequency 
+    and volume for wee"| FF;
+    BB -->|"if No 
+    Set frequency 
+    and volume for wah"| FF[Loop through each sample];
+    FF --> GG["Calculate wave position(dt)
+    Calculate current value
+    Add value to waveform vector"];
+    GG --> JJ{End of samples?};
+    JJ -->|No| FF;
+    JJ -->|Yes|MM[Exit Function]
+    
+  end
+
+subgraph Main Function
+  direction TB
+    B[Include Libraries] --> C[Define Main Program Variables];
     C --> D[Set Initial Parameters];
-    D --> E[Initialize Repetitions to 10];
+    D --> E[Set Repetitions to 10];
     E --> F[Enter Loop for Repetitions];
     F --> G{Reps > 0?};
     G -->|Yes| H[[Generate Waveform]];
-    G -->|No| I[Save Waveform to WAV File];
+    G -->|No| I[Save to WAV File];
     H --> J[Toggle weeWah];
-    J --> K[Decrement Reps];
-    K --> F;
-    I --> L[Clear Waveform Vector];
-    L --> M[End Program];
-  end
-
-subgraph Generate Waveform
-  direction TB
-    AA(Start Waveform Generation) --> BB{weeWah is true?};
-    BB -->|Yes| CC[Set frequency and volume for wee];
-    BB -->|No| DD[Set frequency and volume for wah];
-    CC --> EE[Initialize Sample Loop];
-    DD --> EE;
-    EE --> FF[Loop through each sample];
-    FF --> GG[Calculate dt];
-    GG --> HH[Calculate waveform value];
-    HH --> II[Add value to waveform vector];
-    II --> JJ{End of samples?};
-    JJ -->|Yes| KK(End Waveform Generation);
-    JJ -->|No| FF;
+    J -->|"Decrement Reps"| F;
+    I --> M[End Program];
   end
 ```
