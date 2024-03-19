@@ -27,5 +27,13 @@ Q-->R
 R-->S
 S-->T
 T-->U
-end    
+end
+subgraph three
+direction TB 
+V-->W
+W-->X
+X-->Y
+Y-->Z
+Z-->ZZ
+end
 ```
