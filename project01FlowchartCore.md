@@ -4,7 +4,7 @@
 ---
 
 flowchart TD
-    A(Start) -->B(Stop)
+    A((Start))-->B((Stop))
 
 
 ```
