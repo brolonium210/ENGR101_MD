@@ -18,9 +18,9 @@ number of samples?"
 }--Yes
 Pass vector into the
 make wav function-->F
-F--No -->G
-G["push new value onto vector"]-->GG
-GG[[MakeWavFromInt]]-->GGG(End)
+E--No -->G
+G["push new value onto vector"]-->E
+F[[MakeWavFromInt]]-->GGG(End)
 end
 
 subgraph MakeWavFromInt
