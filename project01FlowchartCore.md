@@ -19,14 +19,13 @@ K-->L
 L-->M
 M-->N
 end
-subgraph three
+subgraph Main Function
 direction TB 
-O-->P
-P-->Q
-Q-->R
-R-->S
-S-->T
-T-->U
+O(Start)-->P
+P[Set Variables for Equation]-->Q
+Q[Build a vector]-->R
+R[From 0 to number of samples]-->S
+S[[MakeWavFromInt]]-->T(Start)
 end
 subgraph topfile
 direction TB 
