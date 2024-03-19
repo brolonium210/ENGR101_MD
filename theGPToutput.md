@@ -1,1 +1,23 @@
+graph TD;
+    A[Start] --> B[Include Necessary Libraries];
+    B --> C[Define Main Program Function];
+    C -->|Initialize| D[Set sample rate to 44,100];
+    D --> E[Set duration to 5 seconds];
+    E --> F[Calculate total number of samples];
+    F --> G[Create empty vector for waveform];
+    G --> H[Set frequency to 300 Hz];
+    H --> I[Set volume];
+    I --> J[Generate the Waveform];
+    J --> K[Loop through each sample];
+    K --> L[Calculate time delta dt];
+    L --> M[Calculate waveform value];
+    M --> N[Add value to waveform vector];
+    N --> O{End of samples?};
+    O -->|Yes| P[Save the Waveform to a WAV File];
+    O -->|No| K;
+    P --> Q[Call MakeWavFromVector with parameters];
+    Q --> R[Clean Up];
+    R --> S[Clear waveform vector];
+    S --> T[End Program];
+    T --> U[Return 0];
 
