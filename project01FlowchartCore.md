@@ -36,7 +36,7 @@ number of samples?"
 }--Yes
 Pass vector into the
 make wav function-->S
-R--No-->SS
+R--No -->SS
 SS["push new value onto vector"]-->R
 S[[MakeWavFromInt]]-->T(End)
 end
