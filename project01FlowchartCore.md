@@ -1,13 +1,16 @@
 ```mermaid
 
 flowchart TB
-subgraph one 
+subgraph one
+direction TB
 A-->B
 end
-subgraph two 
+subgraph two
+direction TB 
 C-->D
 end
-subgraph three 
+subgraph three
+direction TB 
 E-->F
 end    
 ```
