@@ -7,7 +7,7 @@
     E --> F[Calculate number of samples]
     F --> G[Create empty vector for waveform]
     G --> H[Set freq to 300 Hz]
-    H --> I[Set volume(Amplitude)]
+    H --> I["Set volume(Amplitude)"]
     I --> J[Generate the Waveform]
     J --> K[Loop through each sample]
     K --> L[Calculate time between samples]
