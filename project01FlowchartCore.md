@@ -1,7 +1,7 @@
 ```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+  title:Core Flowchart
+  flowchart TD
+    Start --> Stop
+
+
 ```
