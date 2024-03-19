@@ -10,7 +10,7 @@ D-->E
 E-->F
 F-->G
 end
-subgraph two
+subgraph MakeWavFromInt
 direction TB 
 H-->I
 I-->J
@@ -19,6 +19,7 @@ K-->L
 L-->M
 M-->N
 end
+
 subgraph Main Function
 direction TB 
 O(Start)-->P
@@ -32,9 +33,11 @@ RR[set i to 0]-->R
 R{"does i equal
 number of samples?"
 }--|Yes|-->S
-R--|No|-->RR
-S[[MakeWavFromInt]]-->T(Start)
+R--|No|-->SS
+SS["push new value onto vector"]-->R
+S[[MakeWavFromInt]]-->T(End)
 end
+
 subgraph topfile
 direction TB 
 V(Start)-->W[Load Libraries]
