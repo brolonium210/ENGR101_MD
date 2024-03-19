@@ -1,14 +1,6 @@
 ```mermaid
 
 flowchart TB
-subgraph one
-direction TB
-A-->B
-B-->C
-C-->D
-D-->E
-E-->F
-F-->G
 
 subgraph Completion Main
 direction TB 
@@ -29,9 +21,8 @@ make wav function-->F
 F--No -->G
 G["push new value onto vector"]-->GG
 GG[[MakeWavFromInt]]-->GGG(End)
-
-
 end
+
 subgraph MakeWavFromInt
 direction TB 
 H-->I
