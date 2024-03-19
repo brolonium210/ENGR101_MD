@@ -5,9 +5,9 @@ subgraph one
 A-->B
 end
 subgraph two 
-A-->B
+C-->D
 end
 subgraph three 
-A-->B
+E-->F
 end    
 ```
