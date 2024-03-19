@@ -33,7 +33,8 @@ Q[Build a vector]-->RR
 RR[set i to 0]-->R
 R{"does i equal
 number of samples?"
-}--|Yes|-->S
+}--|"Yes
+Pass vector into the make wav function"|-->S
 R--|No|-->SS
 SS["push new value onto vector"]-->R
 S[[MakeWavFromInt]]-->T(End)
