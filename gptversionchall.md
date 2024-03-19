@@ -7,9 +7,9 @@ subgraph main
     B --> C(Calculate numSamples)
     C --> D(Initialize waveform vectors)
     D --> E(Set filename)
-    E --> F(Call makeTextToInt)
+    E --> F[[Call makeTextToInt]]
     F --> G[Iterate over waveform]
-    G --> H(Call makeTone for each frequency)
+    G --> H[[Call makeTone for each frequency]]
     H --> I(Print generated waveform2 for debugging)
     I --> J(Save waveform2 to toneChal01.wav)
     J --> K(End)
