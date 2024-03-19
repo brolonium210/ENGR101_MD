@@ -28,7 +28,7 @@ R-->S
 S-->T
 T-->U
 end
-subgraph three
+subgraph four
 direction TB 
 V-->W
 W-->X
