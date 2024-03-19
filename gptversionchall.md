@@ -1,38 +1,45 @@
 ```mermaid
 graph
-direction LR
-subgraph main
-  direction TB;
-    A(Start) --> B(Set sampleRate, duration, volume)
-    B --> C(Calculate numSamples)
-    C --> D(Initialize waveform vectors)
-    D --> E(Set filename)
-    E --> F[[Call makeTextToInt]]
-    F --> G[Iterate over waveform]
-    G --> H[[Call makeTone for each frequency]]
-    H --> I(Print generated waveform2 for debugging)
-    I --> J(Save waveform2 to toneChal01.wav)
-    J --> K(End)
-end
+
 subgraph makeTone
 direction TB
-    BA(Start makeTone) --> BB(Initialize ADSR parameters)
-    BB --> BC[Attack Phase Generation]
-    BC --> BD[Decay Phase Generation]
-    BD --> BE[Sustain Phase Generation]
-    BE --> BF[Release Phase Generation]
-    BF --> BG(End makeTone)
+    BA[[makeTone]] --> BB("Set Attack Values
+    Set Decay Values
+    Set Sustain Values
+    Set Release Values")
+    BB --> BC["Attack Phase Generation
+    Push adjusted values to vector"]
+    BC --> BD["Decay Phase Generation
+    Push adjusted values to vector"]
+    BD --> BE["Sustain Phase Generation
+    Push adjusted values to vector"]
+    BE --> BF["Release Phase Generation
+    Push adjusted values to vector"]
+    BF --> BG(Exit makeTone)
 end
 
-subgraph makeInt
+subgraph makeTextInt
 direction TB
-    CA(Start makeTextToInt) --> CB(Open text file)
+    CA[[makeTextToInt]] --> CB(Open text file)
     CB --> CC(Read each line and convert to integer)
     CC --> CD(Store non-zero integers in vector)
-    CD --> CE(End makeTextToInt)
+    CD --> CE(Exit makeTextToInt)
 end
 
-
+subgraph main
+  direction TB;
+    A(Start) --> B("Set sampleRate 
+    Set duration 
+    Set volume
+    Set filename
+    Set number of samples to sampleRate * duration")
+    B --> D(Build a vector)
+    D --> F[[Call makeTextToInt]]
+    F --> G[Iterate over waveform]
+    G --> H[[Call makeTone for each frequency]]
+    H --> J("Save waveform to .Wav file")
+    J --> K(Exit Main)
+end
 
 
 ```
