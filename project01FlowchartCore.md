@@ -22,16 +22,14 @@ end
 subgraph Main Function
 direction TB 
 O(Start)-->P
-P[
-"Set Variable1
+P["Set Variable1
 Set Variable2
 Set Variable3
 Set Variable4"
 ]-->Q
 Q[Build a vector]-->RR
 RR[set i to 0]-->R
-R{
-"does i equal
+R{"does i equal
 number of samples?"
 }-->S
 S[[MakeWavFromInt]]-->T(Start)
