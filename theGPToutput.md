@@ -1,26 +1,24 @@
 ```mermaid
     graph TD
-    A[Start] --> B[Include Necessary Libraries]
-    B --> C[Define Main Program Function]
-    C -->|Initialize| D[Set sample rate to 44,100]
+    A[Start] --> B["Include iostream ,math.h,vector and wav.hpp"]
+    B --> C[Call Main]
+    C -->D[Set sample rate to 44100]
     D --> E[Set duration to 5 seconds]
-    E --> F[Calculate total number of samples]
+    E --> F[Calculate number of samples]
     F --> G[Create empty vector for waveform]
-    G --> H[Set frequency to 300 Hz]
-    H --> I[Set volume]
+    G --> H[Set freq to 300 Hz]
+    H --> I[Set volume(Amplitude)]
     I --> J[Generate the Waveform]
     J --> K[Loop through each sample]
-    K --> L[Calculate time delta dt]
-    L --> M[Calculate waveform value]
+    K --> L[Calculate time between samples]
+    L --> M[Calculate current value]
     M --> N[Add value to waveform vector]
-    N --> O{End of samples?}
+    N --> O{Have we reached number of samples?}
     O -->|Yes| P[Save the Waveform to a WAV File]
     O -->|No| K
-    P --> Q[Call MakeWavFromVector with parameters]
-    Q --> R[Clean Up]
+    P --> R[Call MakeWavFromVector with parameters]
     R --> S[Clear waveform vector]
-    S --> T[End Program]
-    T --> U[Return 0]
+    S --> T[End Main]
 ```
 ###Include Necessary Libraries
         Include the input-output library for general input and output operations.
