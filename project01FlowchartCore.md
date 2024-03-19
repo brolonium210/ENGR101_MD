@@ -22,7 +22,11 @@ end
 subgraph Main Function
 direction TB 
 O(Start)-->P
-P[Set Variables for Equation]-->Q
+P["Set Variable1
+Set Variable2
+Set Variable3
+Set Variable4
+"]-->Q
 Q[Build a vector]-->R
 R[From 0 to number of samples]-->S
 S[[MakeWavFromInt]]-->T(Start)
