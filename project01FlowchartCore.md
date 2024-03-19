@@ -1,6 +1,9 @@
 ```mermaid
+---
   title:Core Flowchart
-  flowchart TD
+---
+
+flowchart TD
     Start --> Stop
 
 
