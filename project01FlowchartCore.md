@@ -1,23 +1,13 @@
-```mermaid
----
-  title:Core Flowchart
----
-
-flowchart TD
-    A([Start])-->B[[Main]]
-    B-->C([Stop])
-
-
-```
-
-```mermaid
----
-  title:Core Flowchart
----
-
-flowchart TD
-    A([Start])-->B[[Main]]
-    B-->C([Stop])
-
-
-```
+'''mermaid
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    a1-->c2
+    end
+'''
