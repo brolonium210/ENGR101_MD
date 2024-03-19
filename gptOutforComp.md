@@ -22,8 +22,8 @@ subgraph main
 subgraph Generate Waveform
   direction TB
     AA(Start Waveform Generation) --> BB{weeWah is true?};
-    BB -->|Yes| CC[Set frequency and volume for "wee"];
-    BB -->|No| DD[Set frequency and volume for "wah"];
+    BB -->|Yes| CC[Set frequency and volume for wee];
+    BB -->|No| DD[Set frequency and volume for wah];
     CC --> EE[Initialize Sample Loop];
     DD --> EE;
     EE --> FF[Loop through each sample];
